@@ -17,7 +17,7 @@
 ## 📸 Project Screenshots
   <div style="display: flex; flex-direction: row; justify-content: center; align-items: flex-start">
       <img src="https://github.com/floyare/workorganiser/assets/40760726/4c09496f-e99c-43a6-8ab7-64262df2462c" width="200">
-      <img src="https://github.com/floyare/workorganiser/assets/40760726/bf47bb3a-6482-411d-9c09-00bf5431ba79" width="650">
+      <img src="https://github.com/floyare/workorganiser/assets/40760726/bf47bb3a-6482-411d-9c09-00bf5431ba79" width="600">
   </div>
   
 ## ⬇️ Downloads
