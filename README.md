@@ -6,7 +6,7 @@
   - Mobile and desktop app.
   - Cross-platform sync
   - Customizable app color theme
-  - Notification reminder
+  - Todos reminder
   - HTML supported content
   - Categories system
   - Account system
