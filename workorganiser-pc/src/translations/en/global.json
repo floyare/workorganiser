@@ -1,0 +1,20 @@
+{
+  "dashboard": {
+    "greet": "Hi",
+    "closestTodosTitle": "Closest todos:",
+    "todosPageLink": "Todos page",
+    "todoSummary": {
+      "Summary1": "It looks like you have ",
+      "Summary2": " <b>{{length}}</b> todos active ",
+      "Summary3": "<span> and <b>{{length}}</b> of them {{verb}} outdated! 😣 </span>",
+      "Summary4": "<span> and <b>none</b> of them are outdated 😃🎉 </span>",
+      "Summary5": "Make sure to complete all the tasks before creating a new one 😉",
+      "Summary6": " no todos active 😥"
+    }
+  },
+  "noTodos": {
+    "title": "It looks like you have no todos",
+    "desc": "Create your first one at any moment!"
+  }
+
+}

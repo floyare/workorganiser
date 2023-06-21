@@ -1,0 +1,97 @@
+{
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "beforeBuildCommand": "npm run build",
+    "devPath": "http://localhost:1420",
+    "distDir": "../dist",
+    "withGlobalTauri": false
+  },
+  "package": {
+    "productName": "workorganiser",
+    "version": "v0.1c2 alpha dev (21.06.2023) release"
+  },
+  "tauri": {
+    "allowlist": {
+      "all": true,
+      "shell": {
+        "all": true,
+        "open": true
+      },
+      "window": {
+        "all": true,
+        "close": true,
+        "create": true,
+        "hide": true,
+        "show": true,
+        "maximize": true,
+        "minimize": true,
+        "unmaximize": true,
+        "unminimize": true,
+        "startDragging": true
+      }
+    },
+    "bundle": {
+      "active": true,
+      "category": "DeveloperTool",
+      "copyright": "",
+      "deb": {
+        "depends": []
+      },
+      "externalBin": [],
+      "icon": [
+        "icons/96x96.png",
+        "icons/1024x1024.png",
+        "icons/icon.icns",
+        "icons/icon.ico"
+      ],
+      "identifier": "com.fomalhaut.pl",
+      "longDescription": "",
+      "macOS": {
+        "entitlements": null,
+        "exceptionDomain": "",
+        "frameworks": [],
+        "providerShortName": null,
+        "signingIdentity": null
+      },
+      "resources": [],
+      "shortDescription": "",
+      "targets": "all",
+      "windows": {
+        "certificateThumbprint": null,
+        "digestAlgorithm": "sha256",
+        "timestampUrl": ""
+      }
+    },
+    "security": {
+      "csp": null
+    },
+    "updater": {
+      "active": false
+    },
+    "windows": [
+      {
+        "label": "loginWindow",
+        "fullscreen": false,
+        "height": 650, 
+        "resizable": false,
+        "transparent": true,
+        "title": "Workorganiser",
+        "width": 400,
+        "decorations": false,
+        "url": "index.html#/login",
+        "visible": false
+      },
+      {
+        "height": 250,
+        "width": 400,
+        "decorations": false,
+        "url": "../dist/splashscreen.html",
+        "label": "splashscreen",
+        "title": "workorganiser - Loading",
+        "center": true,
+        "alwaysOnTop": true
+        
+      }
+    ]
+  }
+}

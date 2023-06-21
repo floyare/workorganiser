@@ -1,0 +1,40 @@
+@import 'base';
+
+.login__page_wrapper{
+  display: grid;
+  place-content: center;
+  height: 80vh;
+  .login__page_container{
+    h1{
+      color: $CL_TEXT;
+    }
+    .login__page_methods{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      align-items: center;
+      .method{
+        color: $CL_TEXT;
+        cursor: pointer;
+        text-align: center;
+        background-color: transparent;
+        padding: 5px 20px;
+        border-radius: 5px;
+        transition: 0.2s background-color ease-in-out;
+        &:hover{
+          background-color: lighten($CL_BACKGROUND, 5);
+        }
+        svg{
+          font-size: 48px;
+        }
+      }
+    }
+  }
+}
+
+.login__page{
+  .drag__bar{
+    position: fixed;
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "dashboard": {
+    "greet": "Cześć",
+    "closestTodosTitle": "Najbliższe zadania:",
+    "todosPageLink": "Lista zadań",
+    "todoSummary": {
+      "NoTodos": "Wygląda na to, że nie masz zadań 😥"
+    }
+  },
+  "noTodos": {
+    "title": "Wygląda na to, że nie masz zadań",
+    "desc": "Stwórz swoje pierwsze zadanie w dowolnym momencie!"
+  }
+
+}

@@ -1,0 +1,19 @@
+// :root{
+//   --CL_FOREGROUND: #9b6df1
+// }
+
+$CL_FOREGROUND: #9b6df1;
+$CL_TEXT: #f7f7f7;
+$CL_BACKGROUND: #0f0f0f;
+$CL_FAILED: rgb(246, 136, 136);
+$CL_SUCCESS: rgb(64, 173, 50);
+$CL_EDIT: rgb(226, 173, 27);
+
+:root{
+  --CL_FOREGROUND: #9b6df1;
+  --CL_HUE: hue-rotate(0deg);
+}
+
+@function color($color-name) {
+  @return var(--#{$color-name});
+}

@@ -1,0 +1,37 @@
+@import "base";
+
+.modal__wrapper{
+  position:fixed;
+  z-index: 100;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba($CL_BACKGROUND, 0.7);
+  backdrop-filter: blur(5px);
+  display: grid;
+  place-items: center;
+  .modal__box{
+    position: relative;
+    background-color: darken($CL_BACKGROUND, 2);
+    padding: 20px 35px;
+    border-radius: 35px;
+    text-align: left;
+    p{
+      color: darken($CL_TEXT, 30);
+      margin: 5px 0px;
+    }
+    .buttons{
+      margin: 10px 0px;
+      .delete{
+        background-color: $CL_FAILED;
+      }
+      .create{
+        background-color: $CL_SUCCESS;
+      }
+    }
+    h1{
+      color: $CL_TEXT;
+    }
+  }
+}

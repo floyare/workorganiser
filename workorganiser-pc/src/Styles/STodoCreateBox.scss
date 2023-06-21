@@ -1,0 +1,67 @@
+@import "base";
+
+@keyframes slideLeft{
+  from{
+    transform: translateX(100%);
+  }
+  to{
+    transform: translateX(0%);
+  }
+}
+
+.panel__container{
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  z-index: 20;
+  background: rgba($CL_BACKGROUND, 0.7);
+}
+
+.side__panel{
+  background-color: rgba(lighten($CL_BACKGROUND, 2), 1);
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 500px;
+  height: 100%;
+  z-index: 20;
+  padding: 20px 35px;
+  overflow-y: scroll;
+  //animation: slideLeft .3s ease-in-out;
+  h1{
+    color: $CL_TEXT;
+  }
+  p{
+    color: darken($CL_TEXT, 25);
+  }
+  .todo__create_section{
+    margin: 15px 0px;
+    button{
+      &:not(&:first-child){
+        margin-left: 5px;
+      }
+    }
+    .confirm{
+      background-color: var(--CL_FOREGROUND);
+    }
+    .cancel{
+      background-color: transparent;
+    }
+    textarea, input{
+      background-color: $CL_BACKGROUND;
+      color: $CL_TEXT;
+      border: 1px solid var(--CL_FOREGROUND);
+      border-radius: 10px;
+      outline: none;
+      font-size: 20px;
+      padding: 5px 10px;
+    }
+    textarea{
+      min-width: 200px;
+      min-height: 100px;
+      max-width: 400px;
+      max-height: 200px;
+    }
+  }
+}

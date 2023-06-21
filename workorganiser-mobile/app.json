@@ -1,0 +1,53 @@
+{
+  "expo": {
+    "name": "workorganiser",
+    "slug": "workorganiser-mobile",
+    "originalFullName": "@floyare/workorganiser-mobile",
+    "version": "v0.1b4 alpha dev",
+    "orientation": "portrait",
+    "icon": "./assets/1024.png",
+    "userInterfaceStyle": "automatic",
+    "scheme": "com.floyare.workorganisermobile",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#0c0c0c"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "notification": {
+      "icon": "./assets/notify.png"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "runtimeVersion": {
+        "policy": "sdkVersion"
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/1024s.png",
+        "backgroundColor": "#ffffff"
+      },
+      "permissions": [
+        "POST_NOTIFICATIONS"
+      ],
+      "runtimeVersion": {
+        "policy": "sdkVersion"
+      },
+      "package": "com.floyare.workorganisermobile"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "104fcaa2-d9e2-4e5c-a9fc-aaced4953dff"
+      }
+    },
+    "plugins": [
+      "sentry-expo"
+    ]
+  }
+}
