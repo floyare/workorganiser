@@ -45,7 +45,7 @@ https://github.com/floyare/workorganiser/releases
 ## 🛠 Built with
   - supabase
   - React Native / Expo (Mobile)
-  - React / Tauri (Desktop)
+  - React / Tauri / SCSS (Desktop)
   - Typescript
 
 ## 📝 License
