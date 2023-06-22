@@ -12,7 +12,7 @@
   - Account system
   - Todo archivization
   - Working on Windows/Linux/MacOS (Desktop)
-  - Working on Android and IOS (Mobile)
+  - Working on Android (Mobile)
 
 ## 📸 Project Screenshots
   <div style="display: flex; flex-direction: row; justify-content: center; align-items: flex-start">
