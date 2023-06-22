@@ -35,6 +35,19 @@
   p{
     color: darken($CL_TEXT, 25);
   }
+  .panel__content{
+    display: flex;
+    align-items: flex-start;
+    .switch__container{
+      margin: 0px 20px;
+    }
+    .small__title{
+      font-size: 12px;
+      color: darken($CL_TEXT, 40);
+      margin: 5px 0px;
+      line-height: 100%;
+    }
+  }
   .todo__create_section{
     margin: 15px 0px;
     button{

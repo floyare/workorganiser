@@ -3,6 +3,7 @@
     windows_subsystem = "windows"
 )]
 
+use tauri_plugin_autostart::MacosLauncher;
 use tauri::Manager;
 use window_vibrancy::{apply_blur, apply_vibrancy, NSVisualEffectMaterial};
 
@@ -48,6 +49,7 @@ fn main() {
 
             Ok(())
         })
+        .plugin(tauri_plugin_autostart::init(MacosLauncher::LaunchAgent, Some(vec!["--flag1", "--flag2"])))
         .invoke_handler(tauri::generate_handler![applyBlur, close_splashscreen])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");

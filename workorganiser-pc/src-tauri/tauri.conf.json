@@ -8,7 +8,7 @@
   },
   "package": {
     "productName": "workorganiser",
-    "version": "v0.1c2 alpha dev (21.06.2023) release"
+    "version": "1.0.1"
   },
   "tauri": {
     "allowlist": {
@@ -34,13 +34,15 @@
       "active": true,
       "category": "DeveloperTool",
       "copyright": "",
+      "publisher": "floyare",
       "deb": {
         "depends": []
       },
       "externalBin": [],
       "icon": [
-        "icons/96x96.png",
-        "icons/1024x1024.png",
+        "icons/32x32.png",
+        "icons/128x128.png",
+        "icons/128x128@2x.png",
         "icons/icon.icns",
         "icons/icon.ico"
       ],
@@ -54,7 +56,7 @@
         "signingIdentity": null
       },
       "resources": [],
-      "shortDescription": "",
+      "shortDescription": "Organize your plans efficiently",
       "targets": "all",
       "windows": {
         "certificateThumbprint": null,
@@ -85,7 +87,7 @@
         "height": 250,
         "width": 400,
         "decorations": false,
-        "url": "../dist/splashscreen.html",
+        "url": "splashscreen.html",
         "label": "splashscreen",
         "title": "workorganiser - Loading",
         "center": true,

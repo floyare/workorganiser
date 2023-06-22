@@ -21,6 +21,7 @@ import { assignHue, debug } from "./Modules/InternalModuleHandler";
 import { registerExternalNotification } from "./Modules/NotificationHandler";
 import { SortingObject, sortingOptions } from "./Components/TodosManager";
 import { IAuthResponse } from "./Interfaces/IAuthResponse";
+import { enable, isEnabled, disable } from "tauri-plugin-autostart-api";
 
 i18next.init({
   interpolation: {escapeValue: false},

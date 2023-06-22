@@ -7,13 +7,20 @@ import { assignHue, limitRates} from "../Modules/InternalModuleHandler";
 import { HexColorPicker } from "react-colorful";
 import { TodosListContext } from "../App";
 import { NotificationType } from "../Interfaces/INotificationBox";
+import Switch from "./Switch";
+import { disable, enable, isEnabled } from "tauri-plugin-autostart-api";
 
 const AppSettings = ({showSettingsSet}: {showSettingsSet: Dispatch<SetStateAction<boolean>>}) => {
   const root = document.documentElement;
   const todosListContext = useContext(TodosListContext)
+  const [launchOnStartup, launchOnStartupSet] = useState(false)
 
   const [appAccent, setAppAccent] = useState<string | null>(todosListContext.userData?.color_accent ? todosListContext.userData.color_accent : root.style.getPropertyValue('--CL_FOREGROUND'));
   const [localColor, setLocalColor] = useState<string | null>(todosListContext.userData?.color_accent ? todosListContext.userData.color_accent : root.style.getPropertyValue('--CL_FOREGROUND'))
+
+  useEffect(() => {
+    isEnabled().then(r => launchOnStartupSet(r))
+  },[])
 
   useEffect(() => {
     root.style.setProperty('--CL_FOREGROUND', appAccent);
@@ -23,16 +30,27 @@ const AppSettings = ({showSettingsSet}: {showSettingsSet: Dispatch<SetStateActio
 
   const handleConfirm = async () => {
     const limit = limitRates(
-      () => {
-        updateUsersColor(appAccent!).then((res) => {
-          if(res.error) {
-            executeNotification(todosListContext, res.error.toString(), NotificationType.ERROR);
-            return
+      async () => {
+        if(appAccent !== localColor) {
+          updateUsersColor(appAccent!).then((res) => {
+            if(res.error) {
+              executeNotification(todosListContext, res.error.toString(), NotificationType.ERROR);
+              return
+            }
+          })
+        }
+
+        if( launchOnStartup !== (await isEnabled())){
+          if(launchOnStartup){
+            await enable()
+          }else{
+            await disable()
           }
-    
-          executeNotification(todosListContext, "User's profile updated!", NotificationType.SUCCESS);
-          showSettingsSet(false);
-        })
+        }
+        
+        //launchOnStartup ? await disable() : await enable()
+        showSettingsSet(false);
+        executeNotification(todosListContext, "User's profile updated!", NotificationType.SUCCESS);
       }
     )
     
@@ -65,9 +83,15 @@ const AppSettings = ({showSettingsSet}: {showSettingsSet: Dispatch<SetStateActio
           }}><Icon icon="uiw:logout" /> Logout</button>
         </div>
 
-        <p className="panel__content_header" style={{marginTop: 20}}><Icon icon="mdi:color" /> App color accent: </p>
+        <p className="panel__content_header" style={{marginTop: 20}}><Icon icon="material-symbols:settings" /> App settings: </p>
         <div className="panel__content">
-          <HexColorPicker color={appAccent ? appAccent : "#9b6df1"} onChange={setAppAccent} />
+          <div>
+            <p className="small__title">App theme:</p>
+            <HexColorPicker color={appAccent ? appAccent : "#9b6df1"} onChange={setAppAccent} />
+          </div>
+          <Switch variable={launchOnStartup} text="Launch on startup" onChange={async (e) => {
+            launchOnStartupSet(prev => !prev)
+          }}/>
         </div>
 
         <div className="todo__create_section">

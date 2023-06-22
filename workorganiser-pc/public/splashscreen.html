@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>workorganiser</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;800;900&display=swap" rel="stylesheet">
+  <style>
+    body{
+      margin: 0;
+      padding: 0;
+      background-color: rgb(7, 7, 7);
+      font-family: 'Poppins', sans-serif;
+      display: grid;
+      place-content: center;
+      height: 100vh;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    h1{
+      color: white;
+    }
+
+    img{
+      animation: pulse 4s infinite ease-in-out;
+    }
+
+    #down{
+      position: fixed;
+      bottom: -150px;
+      right: -150px;
+      width: 300px;
+      height: 300px;
+      border-radius: 100%;
+      background-color: #503d90;
+      filter: blur(150px)
+    }
+
+    #up{
+      position: fixed;
+      top: -150px;
+      left: -150px;
+      width: 300px;
+      height: 300px;
+      border-radius: 100%;
+      background-color: #503d90;
+      filter: blur(150px)
+    }
+
+    @keyframes pulse {
+      0%{
+        transform: scale(1);
+        filter: drop-shadow(1px 1px 10px #503d90)
+      }
+      50%{
+        transform: scale(1.1);
+        filter: drop-shadow(1px 1px 25px #503d90)
+      }
+      100%{
+        transform: scale(1);
+        filter: drop-shadow(1px 1px 10px #503d90)
+      }
+    }
+  </style>
+</head>
+  <body>
+    <div id="up"></div>
+    <img src="icon.png" width="200"/>
+    <!-- <h1>test</h1> -->
+    <div id="down"></div>
+  </body>
+</html>

@@ -57,8 +57,8 @@ export function reRunFunction(func: () => void){
 
 function rgbToHsl(r: number, g: number, b: number) {
   r /= 255, g /= 255, b /= 255;
-  let max = Math.max(r, g, b), min = Math.min(r, g, b);
-  let h, s, l = (max + min) / 2;
+  let max:number = Math.max(r, g, b), min:number = Math.min(r, g, b);
+  let h:number = 0, s:number, l:number = (max + min) / 2;
 
   if (max == min) {
     h = s = 0; // achromatic

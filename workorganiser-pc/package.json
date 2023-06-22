@@ -1,7 +1,7 @@
 {
   "name": "workorganiser-pc",
   "private": true,
-  "version": "v0.1c2 alpha dev (19.06.2023)",
+  "version": "v0.1c3 alpha dev (22.06.2023)",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -29,7 +29,8 @@
     "react-responsive-masonry": "^2.1.7",
     "react-router-dom": "6.2.2",
     "react-sortablejs": "^6.1.4",
-    "sortablejs": "^1.15.0"
+    "sortablejs": "^1.15.0",
+    "tauri-plugin-autostart-api": "github:tauri-apps/tauri-plugin-autostart#v1"
   },
   "devDependencies": {
     "@iconify/react": "^4.1.0",
