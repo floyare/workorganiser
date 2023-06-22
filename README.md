@@ -11,8 +11,8 @@
   - Categories system
   - Account system
   - Todo archivization
-  - Working on Windows/Linux/MacOS (Desktop)
-  - Working on Android (Mobile)
+  - Working on <a href="https://github.com/floyare/workorganiser/releases/tag/Desktop">Windows/Linux/MacOS (Desktop)</a>
+  - Working on <a href="https://github.com/floyare/workorganiser/releases/tag/Mobile">Android (Mobile)</a>
 
 ## 📸 Project Screenshots
   <div style="display: flex; flex-direction: row; justify-content: center; align-items: flex-start">
