@@ -1,5 +1,5 @@
 ## <img src="https://github.com/floyare/workorganiser/assets/40760726/05706d8c-369f-450f-ad8c-702352fedba5">
-<a style="text-align: center;"> [⬇️ Download Now!](https://github.com/hellzerg/optimizer/releases) </a> <br>
+<a style="text-align: center;"> [⬇️ Download Now!](https://github.com/floyare/workorganiser/releases) </a> <br>
 <b> workorganiser </b> is an app that provides efficient way to manage and monitor your todos by setting options like (deadline, importance) of your todo. Your todos will reminded by sending notification to your device <b>3 days</b> before final deadline that was provided.
 
 ## 💜 Features
